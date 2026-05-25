@@ -1,6 +1,6 @@
 export const profile = {
   name: "Yogesh",
-  brand: "Yogesh.dev",
+  brand: "Yogesh Kharadkar",
   role: "Lead UI / Frontend Developer",
   greeting: "Hello, I'm",
   tagline:
@@ -10,7 +10,7 @@ export const profile = {
   yearsExperience: "8+",
   location: "Available for on-site, hybrid, remote & international roles",
   resumeUrl: "/resume/Yogesh-Kharadkar-Resume-2026.pdf",
-  
+
   resumeFileName: "Yogesh-Kharadkar-Resume-2026.pdf",
   email: "yogeshkharadkark78@gmail.com",
   social: [

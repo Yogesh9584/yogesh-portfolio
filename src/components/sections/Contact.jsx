@@ -66,18 +66,6 @@ export default function Contact() {
             </ul>
           </GlassCard>
 
-          <GlassCard className="p-6 bg-gradient-to-br from-accent-indigo/20 to-transparent border-accent-indigo/20">
-            <p className="text-sm font-medium text-white">
-              Ready to elevate your product UI?
-            </p>
-            <Button
-              variant="primary"
-              className="mt-4 w-full"
-              href={`mailto:${profile.email}`}
-            >
-              Start a Conversation
-            </Button>
-          </GlassCard>
         </motion.div>
 
         <GlassCard className="lg:col-span-3 p-8 md:p-10 relative">
