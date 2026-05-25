@@ -1,0 +1,154 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Send } from "lucide-react";
+import { LinkedInIcon } from "../ui/BrandIcons";
+import SectionTitle from "../ui/SectionTitle";
+import SectionWrapper from "../ui/SectionWrapper";
+import GlassCard from "../ui/GlassCard";
+import Button from "../ui/Button";
+import { profile } from "../../data/profile";
+import { fadeUp } from "../../utils/animations";
+
+const inputClass =
+  "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white placeholder:text-muted/70 outline-none transition focus:border-accent-indigo/50 focus:ring-2 focus:ring-accent-indigo/20";
+
+export default function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
+    window.location.href = `mailto:${profile.email}?subject=Portfolio Contact&body=${body}`;
+  };
+
+  return (
+    <SectionWrapper id="contact" containerClass="max-w-5xl mx-auto">
+      <SectionTitle
+        eyebrow="Get in Touch"
+        title="Contact"
+        subtitle="Open to freelance, full-time, and international product roles."
+      />
+
+      <div className="grid lg:grid-cols-5 gap-8">
+        <motion.div
+          className="lg:col-span-2 space-y-6"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          <GlassCard className="p-8">
+            <h3 className="font-display text-2xl font-bold gradient-text">
+              Let&apos;s build something exceptional
+            </h3>
+            <p className="mt-4 text-muted text-sm leading-relaxed">
+              Reach out for collaborations, hiring inquiries, or project
+              discussions. I typically respond within 24–48 hours.
+            </p>
+
+            <ul className="mt-8 space-y-4">
+              <li>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="flex items-center gap-3 text-muted hover:text-accent-cyan transition-colors"
+                >
+                  <Mail size={20} className="text-accent-indigo" />
+                  {profile.email}
+                </a>
+              </li>
+              {profile.social.map((link) => {
+                const icons = { linkedin: LinkedInIcon };
+                const Icon = icons[link.icon];
+                if (!Icon) return null;
+
+                return (
+                  <li key={link.id}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-muted hover:text-accent-cyan transition-colors"
+                    >
+                      <Icon size={20} className="text-accent-indigo" />
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </GlassCard>
+
+          <GlassCard className="p-6 bg-gradient-to-br from-accent-indigo/20 to-transparent border-accent-indigo/20">
+            <p className="text-sm font-medium text-white">
+              Ready to elevate your product UI?
+            </p>
+            <Button
+              variant="primary"
+              className="mt-4 w-full"
+              href={`mailto:${profile.email}`}
+            >
+              Start a Conversation
+            </Button>
+          </GlassCard>
+        </motion.div>
+
+        <GlassCard className="lg:col-span-3 p-8 md:p-10">
+          <form onSubmit={handleSubmit} className="grid gap-5">
+            <div>
+              <label htmlFor="name" className="sr-only">
+                Your Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                required
+                placeholder="Your Name"
+                className={inputClass}
+                value={form.name}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, name: e.target.value }))
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="sr-only">
+                Your Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="Your Email"
+                className={inputClass}
+                value={form.email}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, email: e.target.value }))
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={5}
+                required
+                placeholder="Message"
+                className={`${inputClass} resize-none`}
+                value={form.message}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, message: e.target.value }))
+                }
+              />
+            </div>
+            <Button variant="primary" type="submit" icon={Send} className="w-full sm:w-auto">
+              Send Message
+            </Button>
+          </form>
+        </GlassCard>
+      </div>
+    </SectionWrapper>
+  );
+}

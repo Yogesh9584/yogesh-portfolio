@@ -1,0 +1,78 @@
+export const skillCategories = [
+  {
+    id: "html",
+    title: "HTML & Markup",
+    icon: "html",
+    skills: [
+      { name: "HTML5", level: 95 },
+      { name: "Semantic HTML", level: 90 },
+      { name: "Accessibility (a11y)", level: 85 },
+      { name: "SEO-Friendly Markup", level: 88 },
+    ],
+  },
+  {
+    id: "css",
+    title: "CSS Frameworks",
+    icon: "css",
+    skills: [
+      { name: "CSS3", level: 92 },
+      { name: "SCSS / SASS", level: 88 },
+      { name: "Tailwind CSS", level: 90 },
+      { name: "Bootstrap", level: 88 },
+      { name: "Responsive Design", level: 94 },
+      { name: "Cross-Browser Compatibility", level: 90 },
+    ],
+  },
+  {
+    id: "javascript",
+    title: "JavaScript Frameworks",
+    icon: "javascript",
+    skills: [
+      { name: "JavaScript (ES6+)", level: 90 },
+      { name: "React.js", level: 92 },
+      { name: "Next.js", level: 88 },
+      { name: "jQuery", level: 85 },
+      { name: "Framer Motion", level: 88 },
+      { name: "Single Page Application (SPA)", level: 90 },
+      { name: "Component-Based Architecture", level: 92 },
+      { name: "API Integration", level: 86 },
+    ],
+  },
+  {
+    id: "uiux",
+    title: "UI/UX & Design",
+    icon: "palette",
+    skills: [
+      { name: "Figma", level: 88 },
+      { name: "Figma to Code", level: 90 },
+      { name: "Adobe Photoshop", level: 82 },
+      { name: "Adobe Illustrator", level: 80 },
+      { name: "CorelDRAW", level: 78 },
+      { name: "Design Systems", level: 86 },
+      { name: "Mobile-First UI", level: 94 },
+    ],
+  },
+  {
+    id: "tools",
+    title: "Tools & AI Assistants",
+    icon: "ai",
+    skills: [
+      { name: "Git & GitHub", level: 88 },
+      { name: "GitHub Copilot", level: 86 },
+      { name: "Cursor AI", level: 88 },
+      { name: "VS Code", level: 90 },
+      { name: "Vite", level: 85 },
+    ],
+  },
+  {
+    id: "practices",
+    title: "Frontend Practices",
+    icon: "layers",
+    skills: [
+      { name: "Scalable UI", level: 90 },
+      { name: "Performance Optimization", level: 88 },
+      { name: "Code Reviews & Mentoring", level: 85 },
+      { name: "Agile / Product Collaboration", level: 87 },
+    ],
+  },
+];

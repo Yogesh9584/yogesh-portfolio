@@ -1,0 +1,103 @@
+export const categories = ["All", "Sneakers", "Apparel", "Accessories", "Limited"];
+
+export const heroSlides = [
+  {
+    id: 1,
+    title: "Future Motion Collection",
+    subtitle: "Engineered comfort. Premium materials.",
+    cta: "Shop collection",
+    gradient: "from-zinc-900 via-neutral-800 to-black",
+  },
+  {
+    id: 2,
+    title: "Summer Drop 2026",
+    subtitle: "Limited edition colorways — while supplies last.",
+    cta: "Explore drop",
+    gradient: "from-stone-800 via-zinc-900 to-neutral-950",
+  },
+];
+
+export const products = [
+  {
+    id: "p1",
+    name: "Aero Glide Runner",
+    category: "Sneakers",
+    price: 189,
+    rating: 4.9,
+    colors: ["#1a1a1a", "#f5f5f4", "#3b82f6"],
+    badge: "New",
+    description:
+      "Ultra-lightweight runner with responsive foam and breathable knit upper. Built for all-day comfort.",
+  },
+  {
+    id: "p2",
+    name: "Monolith High-Top",
+    category: "Sneakers",
+    price: 220,
+    rating: 4.8,
+    colors: ["#0f172a", "#78716c"],
+    badge: "Bestseller",
+    description:
+      "Statement high-top silhouette with premium leather panels and cushioned collar.",
+  },
+  {
+    id: "p3",
+    name: "Studio Oversized Tee",
+    category: "Apparel",
+    price: 58,
+    rating: 4.7,
+    colors: ["#fafafa", "#171717", "#84cc16"],
+    badge: null,
+    description: "Heavyweight cotton tee with relaxed fit and minimal branding.",
+  },
+  {
+    id: "p4",
+    name: "Flow Tech Jacket",
+    category: "Apparel",
+    price: 145,
+    rating: 4.9,
+    colors: ["#1e293b", "#000000"],
+    badge: "Limited",
+    description: "Water-resistant shell with articulated sleeves and hidden pockets.",
+  },
+  {
+    id: "p5",
+    name: "Orbit Crossbody",
+    category: "Accessories",
+    price: 79,
+    rating: 4.6,
+    colors: ["#292524", "#d6d3d1"],
+    badge: null,
+    description: "Compact crossbody in recycled nylon with magnetic closure.",
+  },
+  {
+    id: "p6",
+    name: "Pulse Wireless Buds",
+    category: "Accessories",
+    price: 129,
+    rating: 4.8,
+    colors: ["#f8fafc", "#18181b"],
+    badge: "New",
+    description: "ANC earbuds with 32hr case battery and spatial audio tuning.",
+  },
+  {
+    id: "p7",
+    name: "Velocity Pro 2",
+    category: "Sneakers",
+    price: 210,
+    rating: 4.9,
+    colors: ["#ef4444", "#1c1917"],
+    badge: "Limited",
+    description: "Race-day performance shoe with carbon plate and energy return foam.",
+  },
+  {
+    id: "p8",
+    name: "Essential Cap",
+    category: "Accessories",
+    price: 38,
+    rating: 4.5,
+    colors: ["#171717", "#e7e5e4"],
+    badge: null,
+    description: "Structured six-panel cap in washed cotton twill.",
+  },
+];
