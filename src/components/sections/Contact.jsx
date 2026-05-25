@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send } from "lucide-react";
+import { Mail } from "lucide-react";
 import { LinkedInIcon } from "../ui/BrandIcons";
+import ContactForm from "../contact/ContactForm";
 import SectionTitle from "../ui/SectionTitle";
 import SectionWrapper from "../ui/SectionWrapper";
 import GlassCard from "../ui/GlassCard";
@@ -9,20 +9,7 @@ import Button from "../ui/Button";
 import { profile } from "../../data/profile";
 import { fadeUp } from "../../utils/animations";
 
-const inputClass =
-  "w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white placeholder:text-muted/70 outline-none transition focus:border-accent-indigo/50 focus:ring-2 focus:ring-accent-indigo/20";
-
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${profile.email}?subject=Portfolio Contact&body=${body}`;
-  };
-
   return (
     <SectionWrapper id="contact" containerClass="max-w-5xl mx-auto">
       <SectionTitle
@@ -93,60 +80,8 @@ export default function Contact() {
           </GlassCard>
         </motion.div>
 
-        <GlassCard className="lg:col-span-3 p-8 md:p-10">
-          <form onSubmit={handleSubmit} className="grid gap-5">
-            <div>
-              <label htmlFor="name" className="sr-only">
-                Your Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                required
-                placeholder="Your Name"
-                className={inputClass}
-                value={form.name}
-                onChange={(e) =>
-                  setForm((f) => ({ ...f, name: e.target.value }))
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="sr-only">
-                Your Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                required
-                placeholder="Your Email"
-                className={inputClass}
-                value={form.email}
-                onChange={(e) =>
-                  setForm((f) => ({ ...f, email: e.target.value }))
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="sr-only">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                required
-                placeholder="Message"
-                className={`${inputClass} resize-none`}
-                value={form.message}
-                onChange={(e) =>
-                  setForm((f) => ({ ...f, message: e.target.value }))
-                }
-              />
-            </div>
-            <Button variant="primary" type="submit" icon={Send} className="w-full sm:w-auto">
-              Send Message
-            </Button>
-          </form>
+        <GlassCard className="lg:col-span-3 p-8 md:p-10 relative">
+          <ContactForm />
         </GlassCard>
       </div>
     </SectionWrapper>

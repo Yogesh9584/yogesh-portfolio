@@ -70,7 +70,8 @@ export default function Hero() {
             variant="secondary"
             icon={Download}
             href={profile.resumeUrl}
-            download
+            download={profile.resumeFileName}
+            aria-label="Download resume PDF"
           >
             Download Resume
           </Button>
