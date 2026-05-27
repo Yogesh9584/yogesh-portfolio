@@ -18,9 +18,9 @@ export default function Contact() {
         subtitle="Open to freelance, full-time, and international product roles."
       />
 
-      <div className="grid lg:grid-cols-5 gap-8">
+      <div className="w-1/2 mx-auto">
         <motion.div
-          className="lg:col-span-2 space-y-6"
+          className=""
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -30,8 +30,8 @@ export default function Contact() {
               Let&apos;s build something exceptional
             </h3>
             <p className="mt-4 text-muted text-sm leading-relaxed">
-              Reach out for collaborations, hiring inquiries, or project
-              discussions. I typically respond within 24–48 hours.
+              Reach out for hiring inquiries, collaborations or project
+              discussions..
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -68,9 +68,9 @@ export default function Contact() {
 
         </motion.div>
 
-        <GlassCard className="lg:col-span-3 p-8 md:p-10 relative">
+        {/* <GlassCard className="lg:col-span-3 p-8 md:p-10 relative">
           <ContactForm />
-        </GlassCard>
+        </GlassCard> */}
       </div>
     </SectionWrapper>
   );
