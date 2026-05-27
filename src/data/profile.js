@@ -12,9 +12,9 @@ export const profile = {
     Experienced in delivering SaaS products, responsive dashboards, and scalable frontend solutions with strong focus on usability and user experience.`,
   yearsExperience: "8+",
   location: "Available for on-site, hybrid, remote & international roles",
-  resumeUrl: "/resume/Yogesh-Kharadkar-Resume-2026.pdf",
+  resumeUrl: "/resume/Yogesh-Kharadkar-Resume.pdf",
 
-  resumeFileName: "Yogesh-Kharadkar-Resume-2026.pdf",
+  resumeFileName: "Yogesh-Kharadkar-Resume.pdf",
   email: "yogeshkharadkark78@gmail.com",
   social: [
     // { id: "github", label: "GitHub", href: "https://github.com", icon: "github" },
