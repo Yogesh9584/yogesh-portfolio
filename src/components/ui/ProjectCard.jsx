@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { GitHubIcon } from "./BrandIcons";
@@ -35,8 +36,9 @@ export default function ProjectCard({
   liveUrl,
   githubUrl,
   demoLabel = "Live Demo",
-  sourceLabel = "GitHub",
 }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <GlassCard className="group overflow-hidden p-0">
       <motion.div
@@ -51,36 +53,37 @@ export default function ProjectCard({
         <h3 className="font-display text-xl md:text-2xl font-bold text-white group-hover:text-accent-cyan transition-colors">
           {title}
         </h3>
-        <p className="mt-3 text-sm md:text-base text-muted leading-relaxed">
-          {description}
-        </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tech.map((t) => (
-            <Tag key={t}>{t}</Tag>
-          ))}
+        {/* Description */}
+        <div className="mt-3">
+          <p
+            className={`text-sm md:text-base text-muted leading-relaxed transition-all duration-300 ${
+              expanded ? "" : "line-clamp-2"
+            }`}
+          >
+            {description}
+          </p>
+
+          {description?.length > 120 && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="mt-2 text-sm text-accent-cyan hover:underline"
+            >
+              {expanded ? "Show Less" : "Show More"}
+            </button>
+          )}
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 w-full">
           <Button
             variant="primary"
             href={liveUrl}
             icon={ExternalLink}
-            className="!py-2.5 !px-5 text-sm"
+            className="!py-2.5 !px-5 text-sm block w-full"
             target="_blank"
             rel="noopener noreferrer"
           >
             {demoLabel}
-          </Button>
-          <Button
-            variant="secondary"
-            href={githubUrl}
-            icon={GitHubIcon}
-            className="!py-2.5 !px-5 text-sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {sourceLabel}
           </Button>
         </div>
       </div>

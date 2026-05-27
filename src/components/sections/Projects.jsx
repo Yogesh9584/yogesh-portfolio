@@ -11,7 +11,7 @@ export default function Projects() {
       <SectionTitle
         eyebrow="Work"
         title="Projects"
-        subtitle="Selected builds showcasing premium UI, React architecture, and polished interactions."
+        subtitle="Selected builds showcasing premium UI and polished interactions."
       />
 
       <motion.div
@@ -26,9 +26,8 @@ export default function Projects() {
               title={project.title}
               description={project.description}
               image={project.image}
-              tech={project.tech}
+              // tech={project.tech}
               liveUrl={project.liveUrl}
-              githubUrl={project.githubUrl}
             />
           </motion.div>
         ))}
