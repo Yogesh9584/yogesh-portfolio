@@ -1,5 +1,20 @@
 export const skillCategories = [
   {
+    id: "javascript",
+    title: "JavaScript Frameworks",
+    icon: "javascript",
+    skills: [
+      { name: "JavaScript (ES6+)", level: 75 },
+      { name: "React.js", level: 80 },
+      { name: "Next.js", level: 70 },
+      { name: "jQuery", level: 80 },
+      { name: "Framer Motion", level: 80 },
+      { name: "Single Page Application (SPA)", level: 90 },
+      { name: "Component-Based Architecture", level: 90 },
+      { name: "API Integration", level: 85 },
+    ],
+  },
+  {
     id: "html",
     title: "HTML & Markup",
     icon: "html",
@@ -21,21 +36,6 @@ export const skillCategories = [
       { name: "Bootstrap", level: 88 },
       { name: "Responsive Design", level: 94 },
       { name: "Cross-Browser Compatibility", level: 90 },
-    ],
-  },
-  {
-    id: "javascript",
-    title: "JavaScript Frameworks",
-    icon: "javascript",
-    skills: [
-      { name: "JavaScript (ES6+)", level: 90 },
-      { name: "React.js", level: 92 },
-      { name: "Next.js", level: 88 },
-      { name: "jQuery", level: 85 },
-      { name: "Framer Motion", level: 88 },
-      { name: "Single Page Application (SPA)", level: 90 },
-      { name: "Component-Based Architecture", level: 92 },
-      { name: "API Integration", level: 86 },
     ],
   },
   {

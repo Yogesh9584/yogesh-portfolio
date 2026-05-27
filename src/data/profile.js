@@ -5,8 +5,11 @@ export const profile = {
   greeting: "Hello, I'm",
   tagline:
     "Creating immersive digital experiences with Frontend Frameworks, animations, and futuristic UI systems.",
-  about:
-    "Passionate frontend developer with 8+ years of experience crafting responsive and engaging digital experiences using React.js, JavaScript, and modern UI systems.",
+    about: `Frontend Engineer with 8+ years of experience in building scalable, responsive, and high-performance web applications using React.js and Next.js.
+
+    Skilled in reusable component architecture, modern UI systems, performance optimization, and enterprise frontend development.
+    
+    Experienced in delivering SaaS products, responsive dashboards, and scalable frontend solutions with strong focus on usability and user experience.`,
   yearsExperience: "8+",
   location: "Available for on-site, hybrid, remote & international roles",
   resumeUrl: "/resume/Yogesh-Kharadkar-Resume-2026.pdf",
