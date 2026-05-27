@@ -53,11 +53,11 @@ export default function DemoProjects() {
                   {project.description}
                 </p>
 
-                <div className="mt-4 flex flex-wrap gap-1.5">
+                {/* <div className="mt-4 flex flex-wrap gap-1.5">
                   {project.tech.map((t) => (
                     <Tag key={t}>{t}</Tag>
                   ))}
-                </div>
+                </div> */}
 
                 <div className="mt-5 flex flex-col gap-2">
                   <Button
@@ -68,16 +68,7 @@ export default function DemoProjects() {
                   >
                     Live Demo
                   </Button>
-                  <Button
-                    variant="secondary"
-                    href={project.sourceUrl}
-                    icon={Code2}
-                    className="w-full !py-2.5 text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </Button>
+                  
                 </div>
               </div>
             </GlassCard>
