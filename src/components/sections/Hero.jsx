@@ -112,6 +112,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="absolute left-1/2 top-1/2 -z-10 h-[min(80vw,520px)] w-[min(80vw,520px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent-indigo/10 bg-gradient-radial from-accent-indigo/10 to-transparent animate-pulse-soft" />
+      
     </section>
   );
 }
