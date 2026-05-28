@@ -75,6 +75,7 @@ export default function Hero() {
           >
             Download Resume
           </Button>
+<<<<<<< HEAD
           {/* <Button
             variant="secondary"
             icon={Mail}
@@ -82,6 +83,8 @@ export default function Hero() {
           >
             Contact
           </Button> */}
+=======
+>>>>>>> a31e7b476eac61fa5ccb39bdb4de15335c62b83b
         </motion.div>
 
         <motion.div variants={fadeUp} custom={0.5} className="mt-12">
