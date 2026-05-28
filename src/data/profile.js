@@ -19,7 +19,7 @@ export const profile = {
   social: [
     // { id: "github", label: "GitHub", href: "https://github.com", icon: "github" },
     { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/yogesh-kharadkar-9b0720153?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: "linkedin" },
-    { id: "email", label: "Email", href: "yogeshkharadkark78@gmail.com", icon: "mail" },
+    { id: "email", label: "Email", href: "mailto:yogeshkharadkark78@gmail.com", icon: "mail" },
   ],
   highlights: [
     "8+ years building production-grade UIs",
