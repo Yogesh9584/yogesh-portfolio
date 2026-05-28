@@ -18,7 +18,7 @@ export default function Contact() {
         subtitle="Open to freelance, full-time, and international product roles."
       />
 
-      <div className="w-1/2 mx-auto">
+      <div className="w-full md:w-1/2 mx-auto">
         <motion.div
           className=""
           initial="hidden"
