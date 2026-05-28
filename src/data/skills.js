@@ -6,8 +6,8 @@ export const skillCategories = [
     skills: [
       { name: "JavaScript (ES6+)", level: 75 },
       { name: "React.js", level: 80 },
-      { name: "Next.js", level: 70 },
-      { name: "jQuery", level: 80 },
+      { name: "Next.js", level: 50 },
+      { name: "jQuery", level: 50 },
       { name: "Framer Motion", level: 80 },
       { name: "Single Page Application (SPA)", level: 90 },
       { name: "Component-Based Architecture", level: 90 },
@@ -61,7 +61,6 @@ export const skillCategories = [
       { name: "GitHub Copilot", level: 86 },
       { name: "Cursor AI", level: 88 },
       { name: "VS Code", level: 90 },
-      { name: "Vite", level: 85 },
     ],
   },
   {

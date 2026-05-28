@@ -75,13 +75,13 @@ export default function Hero() {
           >
             Download Resume
           </Button>
-          <Button
+          {/* <Button
             variant="secondary"
             icon={Mail}
             onClick={() => scrollTo("contact")}
           >
             Contact
-          </Button>
+          </Button> */}
         </motion.div>
 
         <motion.div variants={fadeUp} custom={0.5} className="mt-12">
